@@ -1,20 +1,5 @@
 {
-  "productList": [
-    {
-      "productName": "d",
-      "category": "aaaaa",
-      "cep": 123,
-      "mercado": "ex2",
-      "id": 1
-    },
-    {
-      "productName": "b",
-      "category": "asd",
-      "cep": 123,
-      "mercado": "ex1",
-      "id": 3
-    }
-  ],
+  "productList": [],
   "comments": [
     {
       "id": 1,

@@ -12,34 +12,34 @@
   <div style="margin-top: 10px">
     <mat-form-field>
       <mat-label>Filter</mat-label>
-      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. GPS" #input>
     </mat-form-field>
 
     <div class="mat-elevation-z8">
       <table mat-table [dataSource]="dataSource" matSort>
 
         <!-- ID Column -->
-        <ng-container matColumnDef="productName">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Name </th>
-          <td mat-cell *matCellDef="let row"> {{row.productName}} </td>
+        <ng-container matColumnDef="nome_fantasia">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome Fantasia </th>
+          <td mat-cell *matCellDef="let row"> {{row.nome_fantasia}} </td>
         </ng-container>
 
         <!-- Progress Column -->
-        <ng-container matColumnDef="category">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
-          <td mat-cell *matCellDef="let row"> {{row.category}}% </td>
+        <ng-container matColumnDef="ddd_telefone_1">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Telefone </th>
+          <td mat-cell *matCellDef="let row"> {{row.ddd_telefone_1}}% </td>
         </ng-container>
 
         <!-- Name Column -->
-        <ng-container matColumnDef="mercado">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Mercado </th>
-          <td mat-cell *matCellDef="let row"> {{row.mercado}} </td>
+        <ng-container matColumnDef="city">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Cidade </th>
+          <td mat-cell *matCellDef="let row"> {{row.city}} </td>
         </ng-container>
 
         <!-- Fruit Column -->
-        <ng-container matColumnDef="cep">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> CEP </th>
-          <td mat-cell *matCellDef="let row"> {{row.cep | currency}} </td>
+        <ng-container matColumnDef="state">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
+          <td mat-cell *matCellDef="let row"> {{row.state}} </td>
         </ng-container>
 
         <ng-container matColumnDef="action">
