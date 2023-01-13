@@ -1,0 +1,28 @@
+{
+  "productList": [
+    {
+      "productName": "aaaaa",
+      "category": "aaaaa",
+      "cep": 123,
+      "mercado": "ex2",
+      "id": 1
+    },
+    {
+      "productName": "bbbb",
+      "category": "bbbb",
+      "cep": 123,
+      "mercado": "ex2",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
