@@ -1,5 +1,5 @@
 <h1 mat-dialog-title>Add Product Form</h1>
-<div mat-dialog-content>
+<div class="container-dialog" mat-dialog-content>
 <form [formGroup]="productForm">
 
   <!-- Empresa -->
@@ -28,7 +28,7 @@
     <input formControlName="site" matInput placeholder="Placeholder">
   </mat-form-field>
 
-  <mat-select formControlName="mercado" placeholder="...">
+  <mat-select formControlName="mercado" placeholder="Mercado">
     <mat-option value="ex1">Facilities</mat-option>
     <mat-option value="ex2">Varejo</mat-option>
     <mat-option value="ex3">Alimentos</mat-option>
