@@ -1,3 +1,4 @@
+import { CepCnpjService } from './../services/cep-cnpj.service';
 import { ApiService } from './../services/api.service';
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -15,6 +16,7 @@ export class DialogComponent {
   productForm !: FormGroup;
   constructor(private formBuilder: FormBuilder,
     private api: ApiService,
+    private searchCepCnpj: CepCnpjService,
     @Inject(MAT_DIALOG_DATA) public editData: any,
     private dialogRef: MatDialogRef<DialogComponent>) {  }
 
@@ -99,5 +101,50 @@ export class DialogComponent {
       }
     })
   }
+
+  populaFormCep(dados: any, form: any){
+    console.log(dados)
+    console.log(form)
+      this.productForm.controls['neighborhood'].setValue(dados.neighborhood);
+      this.productForm.controls['city'].setValue(dados.city);
+      this.productForm.controls['state'].setValue(dados.state);
+      this.productForm.controls['street'].setValue(dados.street);
+
+  }
+
+  populaFormCnpj(dados: any, form: any){
+    console.log(dados)
+    console.log(form)
+    this.productForm.controls['razao_social'].setValue(dados.razao_social);
+    this.productForm.controls['nome_fantasia'].setValue(dados.nome_fantasia);
+    this.productForm.controls['capital_social'].setValue(dados.capital_social);
+    this.productForm.controls['cnae_fiscal'].setValue(dados.cnae_fiscal);
+    this.productForm.controls['cnae_fiscal_descricao'].setValue(dados.cnae_fiscal_descricao);
+    this.productForm.controls['email'].setValue(dados.email);
+    this.productForm.controls['ddd_telefone_1'].setValue(dados.ddd_telefone_1);
+}
+
+  consultaCep(valor: any, form: any){
+    this.searchCepCnpj.buscarCep(valor).subscribe((dados) => this.populaFormCep(dados, form));
+  }
+
+  consultaCnpj(valor: any, form: any){
+    this.searchCepCnpj.buscarCnpj(valor).subscribe((dados) => this.populaFormCnpj(dados, form));
+  }
+
+  onFocusOutEventCep(event: any, form: any) {
+    console.log(event)
+    console.log(form)
+    this.consultaCep(event.target.value, form)
+
+  }
+
+  onFocusOutEventCnpj(event: any, form: any) {
+    console.log(event)
+    console.log(form)
+    this.consultaCnpj(event.target.value, form)
+  }
+
+
 
 }

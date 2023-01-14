@@ -5,7 +5,7 @@
   <!-- Empresa -->
   <mat-form-field appearance="outline">
     <mat-label>CNPJ</mat-label>
-    <input formControlName="cnpj" matInput placeholder="Placeholder">
+    <input formControlName="cnpj" matInput placeholder="Placeholder" (focusout)="onFocusOutEventCnpj($event, productForm)">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
@@ -58,7 +58,7 @@
   <!-- Endereco -->
   <mat-form-field appearance="outline">
     <mat-label>CEP</mat-label>
-    <input formControlName="cep" matInput placeholder="Placeholder">
+    <input formControlName="cep" matInput placeholder="Placeholder" (focusout)="onFocusOutEventCep($event, productForm)">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
