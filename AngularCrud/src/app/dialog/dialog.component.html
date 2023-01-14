@@ -2,116 +2,145 @@
 <div class="container-dialog" mat-dialog-content>
 <form [formGroup]="productForm">
 
+
+  <mat-tab-group animationDuration="0ms">
+    <mat-tab label="First">
   <!-- Empresa -->
-  <mat-form-field appearance="outline">
-    <mat-label>CNPJ</mat-label>
-    <input formControlName="cnpj" matInput placeholder="Placeholder" (focusout)="onFocusOutEventCnpj($event, productForm)">
-  </mat-form-field>
+  <div class="form-field-style margin-tab">
 
-  <mat-form-field appearance="outline">
-    <mat-label>Razao Social</mat-label>
-    <input formControlName="razao_social" matInput placeholder="Placeholder">
-  </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>CNPJ</mat-label>
+      <input formControlName="cnpj" matInput placeholder="Digite aqui..." (focusout)="onFocusOutEventCnpj($event, productForm)">
+    </mat-form-field>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Nome Fantasia</mat-label>
-    <input formControlName="nome_fantasia" matInput placeholder="Placeholder">
-  </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Razao Social</mat-label>
+      <input formControlName="razao_social" matInput placeholder="Digite aqui...">
+    </mat-form-field>
+  </div>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Capital Social</mat-label>
-    <input formControlName="capital_social" matInput placeholder="Placeholder">
-  </mat-form-field>
+  <div class="form-field-style">
 
-  <mat-form-field appearance="outline">
-    <mat-label>Site</mat-label>
-    <input formControlName="site" matInput placeholder="Placeholder">
-  </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Nome Fantasia</mat-label>
+      <input formControlName="nome_fantasia" matInput placeholder="Digite aqui...">
+    </mat-form-field>
 
-  <mat-select formControlName="mercado" placeholder="Mercado">
-    <mat-option value="ex1">Facilities</mat-option>
-    <mat-option value="ex2">Varejo</mat-option>
-    <mat-option value="ex3">Alimentos</mat-option>
-  </mat-select>
+    <mat-form-field appearance="outline">
+      <mat-label>Capital Social</mat-label>
+      <input formControlName="capital_social" matInput placeholder="Digite aqui...">
+    </mat-form-field>
+  </div>
 
-  <mat-form-field appearance="outline">
-    <mat-label>CNAE Fiscal</mat-label>
-    <input formControlName="cnae_fiscal" matInput placeholder="Placeholder">
-  </mat-form-field>
+  <div class="form-field-style">
 
-  <mat-form-field appearance="outline">
-    <mat-label>CNAE Fiscal Descricao</mat-label>
-    <input formControlName="cnae_fiscal_descricao" matInput placeholder="Placeholder">
-  </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Site</mat-label>
+      <input formControlName="site" matInput placeholder="Digite aqui...">
+    </mat-form-field>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Email</mat-label>
-    <input formControlName="email" matInput placeholder="Placeholder">
-  </mat-form-field>
+    <mat-select formControlName="mercado" placeholder="Selecione aqui">
+      <mat-option value="ex1">Facilities</mat-option>
+      <mat-option value="ex2">Varejo</mat-option>
+      <mat-option value="ex3">Alimentos</mat-option>
+    </mat-select>
+  </div>
 
-  <mat-form-field appearance="outline">
+  <div class="form-field-style">
+
+    <mat-form-field appearance="outline">
+      <mat-label>CNAE Fiscal</mat-label>
+      <input formControlName="cnae_fiscal" matInput placeholder="Digite aqui...">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>CNAE Fiscal Descricao</mat-label>
+      <input formControlName="cnae_fiscal_descricao" matInput placeholder="Digite aqui...">
+    </mat-form-field>
+  </div>
+
+  <div class="form-field-style">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input formControlName="email" matInput placeholder="Digite aqui...">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
     <mat-label>Telefone</mat-label>
-    <input formControlName="ddd_telefone_1" matInput placeholder="Placeholder">
+    <input formControlName="ddd_telefone_1" matInput placeholder="Digite aqui...">
   </mat-form-field>
+</div>
+</mat-tab>
 
-
+<mat-tab label="Second">
   <!-- Endereco -->
-  <mat-form-field appearance="outline">
-    <mat-label>CEP</mat-label>
-    <input formControlName="cep" matInput placeholder="Placeholder" (focusout)="onFocusOutEventCep($event, productForm)">
-  </mat-form-field>
+  <div class="form-field-style margin-tab">
+    <mat-form-field appearance="outline">
+      <mat-label>CEP</mat-label>
+      <input formControlName="cep" matInput placeholder="Digite aqui..." (focusout)="onFocusOutEventCep($event, productForm)">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Street</mat-label>
+      <input formControlName="street" matInput placeholder="Digite aqui...">
+    </mat-form-field>
+  </div>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Street</mat-label>
-    <input formControlName="street" matInput placeholder="Placeholder">
-  </mat-form-field>
+  <div class="form-field-style">
+    <mat-form-field appearance="outline">
+      <mat-label>Numero</mat-label>
+      <input formControlName="numero" matInput placeholder="Digite aqui...">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Bairro</mat-label>
+      <input formControlName="neighborhood" matInput placeholder="Digite aqui...">
+    </mat-form-field>
+  </div>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Numero</mat-label>
-    <input formControlName="numero" matInput placeholder="Placeholder">
-  </mat-form-field>
-
-  <mat-form-field appearance="outline">
-    <mat-label>Bairro</mat-label>
-    <input formControlName="neighborhood" matInput placeholder="Placeholder">
-  </mat-form-field>
-
-  <mat-form-field appearance="outline">
-    <mat-label>Cidade</mat-label>
-    <input formControlName="city" matInput placeholder="Placeholder">
-  </mat-form-field>
-
-  <mat-form-field appearance="outline">
-    <mat-label>UF</mat-label>
-    <input formControlName="state" matInput placeholder="Placeholder">
-  </mat-form-field>
-
+  <div class="form-field-style">
+    <mat-form-field appearance="outline">
+      <mat-label>Cidade</mat-label>
+      <input formControlName="city" matInput placeholder="Digite aqui...">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>UF</mat-label>
+      <input formControlName="state" matInput placeholder="Digite aqui...">
+    </mat-form-field>
+  </div>
+  <div class="form-field-style">
   <mat-form-field appearance="outline">
     <mat-label>Complemento</mat-label>
-    <input formControlName="complemento" matInput placeholder="Placeholder">
+    <input formControlName="complemento" matInput placeholder="Digite aqui...">
   </mat-form-field>
+</div>
+</mat-tab>
 
-
+<mat-tab label="Third">
   <!-- Socios -->
-  <mat-form-field appearance="outline">
-    <mat-label>Nome do Socio</mat-label>
-    <input formControlName="nome_socio" matInput placeholder="Placeholder">
-  </mat-form-field>
+  <div class="form-field-style margin-tab">
+    <mat-form-field appearance="outline">
+      <mat-label>Nome do Socio</mat-label>
+      <input formControlName="nome_socio" matInput placeholder="Digite aqui...">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Qualificacao do Socio</mat-label>
+      <input formControlName="qualificacao_socio" matInput placeholder="Digite aqui...">
+    </mat-form-field>
+  </div>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Qualificacao do Socio</mat-label>
-    <input formControlName="qualificacao_socio" matInput placeholder="Placeholder">
-  </mat-form-field>
+  <div class="form-field-style">
+    <mat-form-field appearance="outline">
+      <mat-label>Data de Entrada Sociedade</mat-label>
+      <input formControlName="data_entrada_sociedade" matInput placeholder="Digite aqui...">
+    </mat-form-field>
+  </div>
+</mat-tab>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Data de Entrada Sociedade</mat-label>
-    <input formControlName="data_entrada_sociedade" matInput placeholder="Placeholder">
-  </mat-form-field>
+</mat-tab-group>
 
 
 </form>
 </div>
-<div mat-dialog-action [align]="'end'">
+<div class="button-forms" mat-dialog-action [align]="'end'">
   <button style="margin-right: 10px;" mat-raised-button color="primary" (click)="addProduct()">{{actionBtn}}</button>
   <button style="margin-right: 10px;" mat-raised-button color="accent" mat-dialog-close>Close</button>
 </div>

@@ -1,5 +1,29 @@
 {
-  "productList": [],
+  "productList": [
+    {
+      "cnpj": "01117473000136",
+      "razao_social": "AUTO POSTO MELO VIANA LTDA",
+      "nome_fantasia": "Auto Posto Melo Viana",
+      "capital_social": 30000,
+      "site": "ww@eu",
+      "mercado": "ex2",
+      "cnae_fiscal": 4731800,
+      "cnae_fiscal_descricao": "Comércio varejista de combustíveis para veículos automotores",
+      "email": "guidinizeng@gmail.com",
+      "ddd_telefone_1": "+5534988023241",
+      "street": "Rua Wenceslau Braz",
+      "numero": "780",
+      "cep": "38440216",
+      "neighborhood": "Centro",
+      "city": "Araguari",
+      "state": "MG",
+      "complemento": "as",
+      "nome_socio": "as",
+      "qualificacao_socio": "as",
+      "data_entrada_sociedade": "as",
+      "id": 1
+    }
+  ],
   "comments": [
     {
       "id": 1,
