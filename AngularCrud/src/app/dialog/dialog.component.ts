@@ -24,25 +24,25 @@ export class DialogComponent {
   ngOnInit(): void {
     this.productForm = this.formBuilder.group({
       cnpj: ['', Validators.required],
-      razao_social: ['', Validators.required],
-      nome_fantasia: ['', Validators.required],
-      capital_social: ['', Validators.required],
-      site: ['', Validators.required],
-      mercado: ['', Validators.required],
-      cnae_fiscal: ['', Validators.required],
-      cnae_fiscal_descricao: ['', Validators.required],
-      email: ['', Validators.required],
-      ddd_telefone_1: ['', Validators.required],
-      street: ['', Validators.required],
-      numero: ['', Validators.required],
+      razao_social: [''],
+      nome_fantasia: [''],
+      capital_social: [''],
+      site: [''],
+      mercado: [''],
+      cnae_fiscal: [''],
+      cnae_fiscal_descricao: [''],
+      email: [''],
+      ddd_telefone_1: [''],
+      street: [''],
+      numero: [''],
       cep: ['', Validators.required],
-      neighborhood: ['', Validators.required],
-      city: ['', Validators.required],
-      state: ['', Validators.required],
-      complemento: ['', Validators.required],
-      nome_socio: ['', Validators.required],
-      qualificacao_socio: ['', Validators.required],
-      data_entrada_sociedade: ['', Validators.required]
+      neighborhood: [''],
+      city: [''],
+      state: [''],
+      complemento: [''],
+      nome_socio: [''],
+      qualificacao_socio: [''],
+      data_entrada_sociedade: ['']
 
     })
     if(this.editData){
