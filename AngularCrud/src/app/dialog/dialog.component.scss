@@ -8,9 +8,14 @@ form{
   width: 100%;
 }
 
+app-dialog{
+  padding: 10px;
+}
+
 .container-dialog {
-  padding: 30px;
-  height: 75vh;
+  padding: 15px;
+  height: 95vh;
+  overflow: hidden;
 }
 
 mat-select{
@@ -24,29 +29,29 @@ mat-select{
 }
 
 .mat-tab-group {
-  margin-bottom: 48px;
+  margin-bottom: 15px;
 }
 
 .button-forms{
-  padding: 30px;
+  padding: 15px;
 }
 
 .form-field-style{
+  width: 725px;
   display:flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
 }
 
 mat-tab-group {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .margin-tab{
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .mat-mdc-tab-body-content{
-  overflow: 0;
   padding: 15px;
 }
