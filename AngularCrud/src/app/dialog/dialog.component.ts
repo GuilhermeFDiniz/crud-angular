@@ -24,7 +24,7 @@ export class DialogComponent {
   ngOnInit(): void {
     this.productForm = this.formBuilder.group({
       cnpj: ['', Validators.required],
-      razao_social: [''],
+      razao_social: ['', Validators.required],
       nome_fantasia: [''],
       capital_social: [''],
       site: [''],
@@ -32,13 +32,13 @@ export class DialogComponent {
       cnae_fiscal: [''],
       cnae_fiscal_descricao: [''],
       email: [''],
-      ddd_telefone_1: [''],
+      ddd_telefone_1: ['', Validators.required],
       street: [''],
       numero: [''],
       cep: ['', Validators.required],
       neighborhood: [''],
-      city: [''],
-      state: [''],
+      city: ['', Validators.required],
+      state: ['', Validators.required],
       complemento: [''],
       nome_socio: [''],
       qualificacao_socio: [''],
@@ -123,6 +123,9 @@ export class DialogComponent {
     this.productForm.controls['cnae_fiscal_descricao'].setValue(dados.cnae_fiscal_descricao);
     this.productForm.controls['email'].setValue(dados.email);
     this.productForm.controls['ddd_telefone_1'].setValue(dados.ddd_telefone_1);
+    this.productForm.controls['nome_socio'].setValue(dados.qsa[0].nome_socio);
+    this.productForm.controls['qualificacao_socio'].setValue(dados.qsa[0].qualificacao_socio);
+    this.productForm.controls['data_entrada_sociedade'].setValue(dados.qsa[0].data_entrada_sociedade);
 }
 
   consultaCep(valor: any, form: any){

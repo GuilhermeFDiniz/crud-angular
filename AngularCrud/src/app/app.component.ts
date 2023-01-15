@@ -14,7 +14,7 @@ import {MatTableDataSource} from '@angular/material/table';
 export class AppComponent implements OnInit {
   title = 'AngularCrud';
 
-  displayedColumns: string[] = ['nome_fantasia', 'ddd_telefone_1', 'city', 'state', 'action'];
+  displayedColumns: string[] = ['razao_social', 'ddd_telefone_1', 'city', 'state', 'action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

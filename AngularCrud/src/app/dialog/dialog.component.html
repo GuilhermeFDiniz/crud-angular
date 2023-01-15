@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>Add Product Form</h1>
+<h1 mat-dialog-title>Cadastrar Empresa</h1>
 <div class="container-dialog" mat-dialog-content>
 <form [formGroup]="productForm">
 
@@ -14,7 +14,7 @@
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-      <mat-label>Razao Social</mat-label>
+      <mat-label>Razão Social</mat-label>
       <input formControlName="razao_social" matInput placeholder="Digite aqui...">
     </mat-form-field>
   </div>
@@ -39,7 +39,7 @@
       <input formControlName="site" matInput placeholder="Digite aqui...">
     </mat-form-field>
 
-    <mat-select formControlName="mercado" placeholder="Selecione aqui">
+    <mat-select formControlName="mercado" placeholder="Selecione aqui o mercado">
       <mat-option value="ex1">Facilities</mat-option>
       <mat-option value="ex2">Varejo</mat-option>
       <mat-option value="ex3">Alimentos</mat-option>
@@ -54,7 +54,7 @@
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-      <mat-label>CNAE Fiscal Descricao</mat-label>
+      <mat-label>CNAE Fiscal Descrição</mat-label>
       <input formControlName="cnae_fiscal_descricao" matInput placeholder="Digite aqui...">
     </mat-form-field>
   </div>
@@ -80,14 +80,14 @@
       <input formControlName="cep" matInput placeholder="Digite aqui..." (focusout)="onFocusOutEventCep($event, productForm)">
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Street</mat-label>
+      <mat-label>Logradouro</mat-label>
       <input formControlName="street" matInput placeholder="Digite aqui...">
     </mat-form-field>
   </div>
 
   <div class="form-field-style">
     <mat-form-field appearance="outline">
-      <mat-label>Numero</mat-label>
+      <mat-label>Número</mat-label>
       <input formControlName="numero" matInput placeholder="Digite aqui...">
     </mat-form-field>
     <mat-form-field appearance="outline">
@@ -102,7 +102,7 @@
       <input formControlName="city" matInput placeholder="Digite aqui...">
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>UF</mat-label>
+      <mat-label>Estado</mat-label>
       <input formControlName="state" matInput placeholder="Digite aqui...">
     </mat-form-field>
   </div>
@@ -118,11 +118,11 @@
   <!-- Socios -->
   <div class="form-field-style margin-tab">
     <mat-form-field appearance="outline">
-      <mat-label>Nome do Socio</mat-label>
+      <mat-label>Nome do Sócio</mat-label>
       <input formControlName="nome_socio" matInput placeholder="Digite aqui...">
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Qualificacao do Socio</mat-label>
+      <mat-label>Qualificação do Sócio</mat-label>
       <input formControlName="qualificacao_socio" matInput placeholder="Digite aqui...">
     </mat-form-field>
   </div>
