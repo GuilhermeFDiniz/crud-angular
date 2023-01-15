@@ -137,7 +137,6 @@ export class DialogComponent {
     console.log(event)
     console.log(form)
     this.consultaCep(event.target.value, form)
-
   }
 
   onFocusOutEventCnpj(event: any, form: any) {
