@@ -43,7 +43,6 @@ export class DialogComponent {
       nome_socio: [''],
       qualificacao_socio: [''],
       data_entrada_sociedade: ['']
-
     })
     if(this.editData){
       this.actionBtn= 'Atualizar';
