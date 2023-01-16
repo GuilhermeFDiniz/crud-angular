@@ -31,9 +31,9 @@ export class DialogComponent {
       mercado: [''],
       cnae_fiscal: [''],
       cnae_fiscal_descricao: [''],
-      email: [''],
+      email: ['', Validators.email],
       ddd_telefone_1: ['', Validators.required],
-      street: [''],
+      street: ['', Validators.required],
       numero: [''],
       cep: ['', Validators.required],
       neighborhood: [''],
@@ -84,7 +84,7 @@ export class DialogComponent {
           }
         })
       }
-    }else {
+    } else {
       this.updateProduct()
     }
   }

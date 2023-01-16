@@ -25,6 +25,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.getAllProducts();
   }
+
   openDialog() {
     this.dialog.open(DialogComponent, {
       width: '60%'
@@ -34,6 +35,7 @@ export class AppComponent implements OnInit {
       }
     });
   }
+
   getAllProducts(){
     this.api.getProduct()
     .subscribe({
@@ -67,6 +69,7 @@ export class AppComponent implements OnInit {
       }
     })
   }
+  
   deleteProduct(id: number){
     this.api.deleteProduct(id)
     .subscribe({
