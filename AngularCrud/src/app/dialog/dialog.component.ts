@@ -12,7 +12,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
 })
 export class DialogComponent {
 
-  actionBtn: string = 'Save'
+  actionBtn: string = 'Salvar'
 
   productForm !: FormGroup;
   constructor(private formBuilder: FormBuilder,
@@ -46,7 +46,7 @@ export class DialogComponent {
 
     })
     if(this.editData){
-      this.actionBtn= 'Update';
+      this.actionBtn= 'Atualizar';
       this.productForm.controls['cnpj'].setValue(this.editData.cnpj);
       this.productForm.controls['razao_social'].setValue(this.editData.razao_social);
       this.productForm.controls['nome_fantasia'].setValue(this.editData.nome_fantasia);
