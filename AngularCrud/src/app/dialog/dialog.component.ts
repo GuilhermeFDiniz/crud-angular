@@ -103,8 +103,6 @@ export class DialogComponent {
   }
 
   populaFormCep(dados: any, form: any){
-    console.log(dados)
-    console.log(form)
       this.productForm.controls['neighborhood'].setValue(dados.neighborhood);
       this.productForm.controls['city'].setValue(dados.city);
       this.productForm.controls['state'].setValue(dados.state);
@@ -113,8 +111,6 @@ export class DialogComponent {
   }
 
   populaFormCnpj(dados: any, form: any){
-    console.log(dados)
-    console.log(form)
     this.productForm.controls['razao_social'].setValue(dados.razao_social);
     this.productForm.controls['nome_fantasia'].setValue(dados.nome_fantasia);
     this.productForm.controls['capital_social'].setValue(dados.capital_social);
