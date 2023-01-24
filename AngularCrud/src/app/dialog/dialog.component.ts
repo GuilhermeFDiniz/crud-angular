@@ -102,12 +102,31 @@ export class DialogComponent {
     })
   }
 
+  onFocusOutEventCep(event: any, form: any) {
+    console.log(event)
+    console.log(form)
+    this.consultaCep(event.target.value, form)
+  }
+
+  onFocusOutEventCnpj(event: any, form: any) {
+    console.log(event)
+    console.log(form)
+    this.consultaCnpj(event.target.value, form)
+  }
+
+  consultaCep(valor: any, form: any){
+    this.searchCepCnpj.buscarCep(valor).subscribe((dados) => this.populaFormCep(dados, form));
+  }
+
+  consultaCnpj(valor: any, form: any){
+    this.searchCepCnpj.buscarCnpj(valor).subscribe((dados) => this.populaFormCnpj(dados, form));
+  }
+
   populaFormCep(dados: any, form: any){
       this.productForm.controls['neighborhood'].setValue(dados.neighborhood);
       this.productForm.controls['city'].setValue(dados.city);
       this.productForm.controls['state'].setValue(dados.state);
       this.productForm.controls['street'].setValue(dados.street);
-
   }
 
   populaFormCnpj(dados: any, form: any){
@@ -123,25 +142,9 @@ export class DialogComponent {
     this.productForm.controls['data_entrada_sociedade'].setValue(dados.qsa[0].data_entrada_sociedade);
 }
 
-  consultaCep(valor: any, form: any){
-    this.searchCepCnpj.buscarCep(valor).subscribe((dados) => this.populaFormCep(dados, form));
-  }
 
-  consultaCnpj(valor: any, form: any){
-    this.searchCepCnpj.buscarCnpj(valor).subscribe((dados) => this.populaFormCnpj(dados, form));
-  }
 
-  onFocusOutEventCep(event: any, form: any) {
-    console.log(event)
-    console.log(form)
-    this.consultaCep(event.target.value, form)
-  }
 
-  onFocusOutEventCnpj(event: any, form: any) {
-    console.log(event)
-    console.log(form)
-    this.consultaCnpj(event.target.value, form)
-  }
 
 
 
